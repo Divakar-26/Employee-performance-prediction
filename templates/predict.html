@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Predict Productivity</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Enter Worker Details</h1>
+        <form action="/submit" method="POST">
+            <label>Incentive</label>
+            <input type="number" step="any" name="incentive" required>
+
+            <label>Over Time</label>
+            <input type="number" step="any" name="over_time" required>
+
+            <label>Number of Style Changes</label>
+            <input type="number" step="1" name="no_of_style_change" required>
+
+            <label>SMV (Standard Minute Value)</label>
+            <input type="number" step="any" name="smv" required>
+
+            <label>Month (1-12)</label>
+            <input type="number" step="1" name="month" min="1" max="12" required>
+
+            <label>Weekday (0 = Mon, 6 = Sun)</label>
+            <input type="number" step="1" name="weekday" min="0" max="6" required>
+
+            <label>Department (1 = Sewing, 0 = Finishing)</label>
+            <input type="number" step="1" name="department_sewing" min="0" max="1" required>
+
+            <input type="submit" value="Predict Productivity">
+        </form>
+        <a class="button" href="/">⟵ Back to Home</a>
+    </div>
+</body>
+</html>
